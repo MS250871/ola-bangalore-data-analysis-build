@@ -150,7 +150,7 @@ python "09 Web Dashboard/tests/test_web.py" --dir "09 Web Dashboard"
 - Fares do not follow distance or vehicle type in this file, so revenue-per-km views are deliberately absent.
 - Turnaround unit (seconds) is the analyst's tentative reading.
 - Segment patterns are unusually flat; confirm the extract is complete and unsampled before acting on segment-level differences.
-- The raw file contains customer IDs, which is why this repository is private. Dashboards contain aggregates only.
+- The raw file includes a Customer_ID column. The dashboards contain aggregates only and never show customer-level data.
 
 ## Licence and data
-Source data: Ola Bengaluru ride bookings, July 2024, as supplied by the author. Do not redistribute the raw file.
+Source data: Ola Bengaluru ride bookings, July 2024, as supplied by the author and included for reproducibility. Check the original dataset's terms before reusing it elsewhere.
