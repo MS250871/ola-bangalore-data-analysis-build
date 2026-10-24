@@ -1,0 +1,442 @@
+{
+  "files": [
+    "Raw Data/ola.csv"
+  ],
+  "findings": [
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "V_TAT"
+      ],
+      "count": 39057,
+      "pct": 37.911,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        },
+        {
+          "Date": "2024-07-11 11:12:00",
+          "Time": "11:12:00",
+          "Booking_ID": "CNR5374902489",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID735691",
+          "Vehicle_Type": "Prime Plus"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "C_TAT"
+      ],
+      "count": 39057,
+      "pct": 37.911,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        },
+        {
+          "Date": "2024-07-11 11:12:00",
+          "Time": "11:12:00",
+          "Booking_ID": "CNR5374902489",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID735691",
+          "Vehicle_Type": "Prime Plus"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Canceled_Rides_by_Customer"
+      ],
+      "count": 92525,
+      "pct": 89.809,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-25 22:20:00",
+          "Time": "22:20:00",
+          "Booking_ID": "CNR2940424040",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID225428",
+          "Vehicle_Type": "Bike"
+        },
+        {
+          "Date": "2024-07-30 19:59:00",
+          "Time": "19:59:00",
+          "Booking_ID": "CNR2982357879",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID270156",
+          "Vehicle_Type": "Prime SUV"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Canceled_Rides_by_Driver"
+      ],
+      "count": 84590,
+      "pct": 82.107,
+      "examples": [
+        {
+          "Date": "2024-07-25 22:20:00",
+          "Time": "22:20:00",
+          "Booking_ID": "CNR2940424040",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID225428",
+          "Vehicle_Type": "Bike"
+        },
+        {
+          "Date": "2024-07-30 19:59:00",
+          "Time": "19:59:00",
+          "Booking_ID": "CNR2982357879",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID270156",
+          "Vehicle_Type": "Prime SUV"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Incomplete_Rides"
+      ],
+      "count": 39057,
+      "pct": 37.911,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        },
+        {
+          "Date": "2024-07-11 11:12:00",
+          "Time": "11:12:00",
+          "Booking_ID": "CNR5374902489",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID735691",
+          "Vehicle_Type": "Prime Plus"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Incomplete_Rides_Reason"
+      ],
+      "count": 99098,
+      "pct": 96.189,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-25 22:20:00",
+          "Time": "22:20:00",
+          "Booking_ID": "CNR2940424040",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID225428",
+          "Vehicle_Type": "Bike"
+        },
+        {
+          "Date": "2024-07-30 19:59:00",
+          "Time": "19:59:00",
+          "Booking_ID": "CNR2982357879",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID270156",
+          "Vehicle_Type": "Prime SUV"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Payment_Method"
+      ],
+      "count": 39057,
+      "pct": 37.911,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        },
+        {
+          "Date": "2024-07-11 11:12:00",
+          "Time": "11:12:00",
+          "Booking_ID": "CNR5374902489",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID735691",
+          "Vehicle_Type": "Prime Plus"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Driver_Ratings"
+      ],
+      "count": 39057,
+      "pct": 37.911,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        },
+        {
+          "Date": "2024-07-11 11:12:00",
+          "Time": "11:12:00",
+          "Booking_ID": "CNR5374902489",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID735691",
+          "Vehicle_Type": "Prime Plus"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Customer_Rating"
+      ],
+      "count": 39057,
+      "pct": 37.911,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-22 3:15:00",
+          "Time": "03:15:00",
+          "Booking_ID": "CNR2395710036",
+          "Booking_Status": "Canceled by Customer",
+          "Customer_ID": "CID581320",
+          "Vehicle_Type": "eBike"
+        },
+        {
+          "Date": "2024-07-11 11:12:00",
+          "Time": "11:12:00",
+          "Booking_ID": "CNR5374902489",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID735691",
+          "Vehicle_Type": "Prime Plus"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "completeness",
+      "check": "missing or placeholder values",
+      "columns": [
+        "Unnamed: 20"
+      ],
+      "count": 103024,
+      "pct": 100.0,
+      "examples": [
+        {
+          "Date": "2024-07-26 14:00:00",
+          "Time": "14:00:00",
+          "Booking_ID": "CNR7153255142",
+          "Booking_Status": "Canceled by Driver",
+          "Customer_ID": "CID713523",
+          "Vehicle_Type": "Prime Sedan"
+        },
+        {
+          "Date": "2024-07-25 22:20:00",
+          "Time": "22:20:00",
+          "Booking_ID": "CNR2940424040",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID225428",
+          "Vehicle_Type": "Bike"
+        },
+        {
+          "Date": "2024-07-30 19:59:00",
+          "Time": "19:59:00",
+          "Booking_ID": "CNR2982357879",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID270156",
+          "Vehicle_Type": "Prime SUV"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Decide: keep as missing, fill (with what), or exclude. Check if missingness is structural (e.g. a field only used in one country)"
+    },
+    {
+      "table": "ola",
+      "dimension": "accuracy",
+      "check": "extreme outliers (beyond 3 x IQR)",
+      "columns": [
+        "Booking_Value"
+      ],
+      "count": 5830,
+      "pct": 5.659,
+      "examples": [
+        {
+          "Booking_Value": "2014",
+          "Date": "2024-07-12 14:44:00",
+          "Time": "14:44:00",
+          "Booking_ID": "CNR1591113431",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID902781"
+        },
+        {
+          "Booking_Value": "2183",
+          "Date": "2024-07-30 19:44:00",
+          "Time": "19:44:00",
+          "Booking_ID": "CNR6805579107",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID810214"
+        },
+        {
+          "Booking_Value": "2936",
+          "Date": "2024-07-26 13:20:00",
+          "Time": "13:20:00",
+          "Booking_ID": "CNR9312632867",
+          "Booking_Status": "Success",
+          "Customer_ID": "CID649563"
+        }
+      ],
+      "suggested_class": 2,
+      "note": "Range 100 to 2999; IQR fences -895 to 1758. Decide keep, cap, or exclude"
+    },
+    {
+      "table": "ola",
+      "dimension": "accuracy",
+      "check": "constant column (one value everywhere)",
+      "columns": [
+        "Unnamed: 20"
+      ],
+      "count": 103024,
+      "pct": 100.0,
+      "examples": [
+        {
+          "value": "nan"
+        }
+      ],
+      "suggested_class": 0,
+      "note": "Carries no information; note it"
+    }
+  ]
+}

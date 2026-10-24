@@ -1,0 +1,40 @@
+{
+  "project_name": "Ola Bengaluru Rides Analysis",
+  "purpose": "Look at the Ola Bengaluru ride bookings data and create a dashboard for the leadership.",
+  "audience": "Operating managers and the leadership team, who use it to make operational and strategic decisions.",
+  "file_prefix": "Ola_Rides_Analysis",
+  "question_target": 12,
+  "selected_questions": 12,
+  "outputs": {
+    "excel_dashboard": true,
+    "web_dashboard": true
+  },
+  "publish_target": "Claude artifact",
+  "platform": "Claude desktop (Cowork)",
+  "kit_version": "1.0.0",
+  "created": "2026-10-24",
+  "raw_hashes": {
+    "Raw Data/ola.csv": {
+      "sha256": "7316570e7a768063a2e1cd6973cec00fd37af03151e1013c15fb1b93e1331478",
+      "bytes": 21445921,
+      "recorded": "2026-10-24"
+    }
+  },
+  "sources": [
+    "Raw Data/ola.csv"
+  ],
+  "measures": [
+    "Booking_Value",
+    "Revenue",
+    "Ride_Distance",
+    "V_TAT_Min",
+    "C_TAT_Min",
+    "Driver_Ratings",
+    "Customer_Rating"
+  ],
+  "filters": [],
+  "date_field": "Booking_Datetime",
+  "keys": [
+    "Booking_ID"
+  ]
+}

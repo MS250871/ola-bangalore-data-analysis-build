@@ -1,0 +1,36 @@
+{
+  "primary_key_candidates": {
+    "ola": [
+      "Booking_ID"
+    ]
+  },
+  "relationships": [],
+  "tables": {
+    "ola": {
+      "rows": 103024,
+      "columns": [
+        "Date",
+        "Time",
+        "Booking_ID",
+        "Booking_Status",
+        "Customer_ID",
+        "Vehicle_Type",
+        "Pickup_Location",
+        "Drop_Location",
+        "V_TAT",
+        "C_TAT",
+        "Canceled_Rides_by_Customer",
+        "Canceled_Rides_by_Driver",
+        "Incomplete_Rides",
+        "Incomplete_Rides_Reason",
+        "Booking_Value",
+        "Payment_Method",
+        "Ride_Distance",
+        "Driver_Ratings",
+        "Customer_Rating",
+        "Vehicle Images",
+        "Unnamed: 20"
+      ]
+    }
+  }
+}

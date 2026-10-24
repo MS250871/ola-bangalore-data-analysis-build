@@ -1,0 +1,379 @@
+{
+  "title": "Ola Bengaluru Rides Analysis",
+  "source": "05 Cleaning and Prep/Ola_Rides_Analysis_Clean_final.xlsx",
+  "data_table": "ola",
+  "other_tables": [],
+  "helper_columns_script": "07 Analysis/helpers.py",
+  "calculated_fields": [
+    {
+      "name": "Success_Rate",
+      "formula": "Is_Completed/Bookings"
+    },
+    {
+      "name": "Avg_Fare",
+      "formula": "Revenue/Is_Completed"
+    },
+    {
+      "name": "CustCancel_Rate",
+      "formula": "Cust_Cancelled/Bookings"
+    },
+    {
+      "name": "DriverCancel_Rate",
+      "formula": "Driver_Cancelled/Bookings"
+    },
+    {
+      "name": "NotFound_Rate",
+      "formula": "Not_Found/Bookings"
+    },
+    {
+      "name": "Failure_Rate",
+      "formula": "Failed/Bookings"
+    }
+  ],
+  "slicers": [
+    "Week_Label",
+    "Vehicle_Type",
+    "Pickup_Location",
+    "Payment_Label"
+  ],
+  "control_totals": [
+    "Booking_Value",
+    "Revenue",
+    "Bookings",
+    "Is_Completed"
+  ],
+  "notes": [
+    "Currency INR. Success = status Success (includes 3,926 flagged incomplete, DQ-05 B). Revenue = completed rides only. Quoted value lost (Q11) is not revenue. Turnaround source unit is seconds (tentative), shown in minutes. No fare-vs-distance or revenue-per-km views (DQ-09 B). Customer_ID is not used. Data covers July 2024 only; week of 29 July has 3 days. Payment slicer: non-completed bookings carry the label 'Not completed (no payment)'. Q8 lists all 50 pickup areas: sort or filter the PivotTable for a top 10."
+  ],
+  "dashboard": {
+    "title": "Ola Bengaluru Rides Dashboard (July 2024)",
+    "notes": [
+      "Amounts in INR. Revenue = completed rides only."
+    ]
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "sheet": "Q01_KPIs",
+      "title": "Headline KPIs",
+      "pivots": [
+        {
+          "name": "PT_Q01",
+          "chart": "none",
+          "values": [
+            {
+              "field": "Bookings",
+              "caption": "Bookings",
+              "format": "int"
+            },
+            {
+              "field": "Is_Completed",
+              "caption": "Completed Rides",
+              "format": "int"
+            },
+            {
+              "field": "Success_Rate",
+              "caption": "Success Rate",
+              "format": "pct"
+            },
+            {
+              "field": "Revenue",
+              "caption": "Revenue (INR)",
+              "format": "money"
+            },
+            {
+              "field": "Avg_Fare",
+              "caption": "Average Fare (INR)",
+              "format": "money"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "sheet": "Q02_Outcome_Mix",
+      "title": "Booking outcome mix",
+      "pivots": [
+        {
+          "name": "PT_Q02",
+          "rows": [
+            "Booking_Status"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Bookings",
+              "caption": "Bookings",
+              "format": "int"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "sheet": "Q03_Daily_Trend",
+      "title": "Daily bookings and success rate",
+      "pivots": [
+        {
+          "name": "PT_Q03",
+          "rows": [
+            "Date_Label"
+          ],
+          "chart": "line",
+          "values": [
+            {
+              "field": "Bookings",
+              "caption": "Bookings",
+              "format": "int"
+            },
+            {
+              "field": "Success_Rate",
+              "caption": "Success Rate",
+              "format": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "sheet": "Q04_Hourly_Demand",
+      "title": "Hourly demand profile",
+      "pivots": [
+        {
+          "name": "PT_Q04",
+          "rows": [
+            "Hour_Label"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Bookings",
+              "caption": "Bookings",
+              "format": "int"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "sheet": "Q05_Hourly_Success",
+      "title": "Success rate by hour of day",
+      "pivots": [
+        {
+          "name": "PT_Q05",
+          "rows": [
+            "Hour_Label"
+          ],
+          "chart": "line",
+          "values": [
+            {
+              "field": "Success_Rate",
+              "caption": "Success Rate",
+              "format": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "sheet": "Q06_Vehicle_Volume_Revenue",
+      "title": "Bookings and revenue by vehicle type",
+      "pivots": [
+        {
+          "name": "PT_Q06",
+          "rows": [
+            "Vehicle_Type"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Bookings",
+              "caption": "Bookings",
+              "format": "int"
+            },
+            {
+              "field": "Revenue",
+              "caption": "Revenue (INR)",
+              "format": "money"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q7",
+      "sheet": "Q07_Vehicle_Failure_Mix",
+      "title": "Cancellation and driver-not-found rates by vehicle type",
+      "pivots": [
+        {
+          "name": "PT_Q07",
+          "rows": [
+            "Vehicle_Type"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "CustCancel_Rate",
+              "caption": "Customer Cancel Rate",
+              "format": "pct"
+            },
+            {
+              "field": "DriverCancel_Rate",
+              "caption": "Driver Cancel Rate",
+              "format": "pct"
+            },
+            {
+              "field": "NotFound_Rate",
+              "caption": "Driver Not Found Rate",
+              "format": "pct"
+            },
+            {
+              "field": "Success_Rate",
+              "caption": "Success Rate",
+              "format": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "sheet": "Q08_Pickup_Areas",
+      "title": "Pickup areas by bookings and failure rate",
+      "pivots": [
+        {
+          "name": "PT_Q08",
+          "rows": [
+            "Pickup_Location"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Bookings",
+              "caption": "Bookings",
+              "format": "int"
+            },
+            {
+              "field": "Failed",
+              "caption": "Failed Bookings",
+              "format": "int"
+            },
+            {
+              "field": "Failure_Rate",
+              "caption": "Failure Rate",
+              "format": "pct"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q9",
+      "sheet": "Q09_Customer_Cancel_Reasons",
+      "title": "Customer cancellation reasons",
+      "pivots": [
+        {
+          "name": "PT_Q09",
+          "rows": [
+            "Cust_Reason"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Cust_Cancelled",
+              "caption": "Customer Cancellations",
+              "format": "int"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "sheet": "Q10_Driver_Cancel_Reasons",
+      "title": "Driver cancellation reasons",
+      "pivots": [
+        {
+          "name": "PT_Q10",
+          "rows": [
+            "Driver_Reason"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Driver_Cancelled",
+              "caption": "Driver Cancellations",
+              "format": "int"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "sheet": "Q11_Quoted_Value_Lost",
+      "title": "Quoted value lost to non-completed bookings, by status",
+      "pivots": [
+        {
+          "name": "PT_Q11",
+          "rows": [
+            "Booking_Status"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "Quoted_Lost",
+              "caption": "Quoted Value Lost (INR)",
+              "format": "money"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "sheet": "Q12_Vehicle_Service_Quality",
+      "title": "Turnaround time and ratings by vehicle type",
+      "pivots": [
+        {
+          "name": "PT_Q12",
+          "rows": [
+            "Vehicle_Type"
+          ],
+          "chart": "bar",
+          "values": [
+            {
+              "field": "V_TAT_Min",
+              "caption": "Avg Vehicle TAT (min)",
+              "format": "num",
+              "agg": "average"
+            },
+            {
+              "field": "C_TAT_Min",
+              "caption": "Avg Customer TAT (min)",
+              "format": "num",
+              "agg": "average"
+            },
+            {
+              "field": "Driver_Ratings",
+              "caption": "Avg Driver Rating",
+              "format": "num",
+              "agg": "average"
+            },
+            {
+              "field": "Customer_Rating",
+              "caption": "Avg Customer Rating",
+              "format": "num",
+              "agg": "average"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

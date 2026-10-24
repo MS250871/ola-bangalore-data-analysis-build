@@ -1,0 +1,2418 @@
+{
+  "mode": "v1",
+  "data_rows": 103024,
+  "control_totals": {
+    "Booking_Value": 56534614.0,
+    "Revenue": 35080467.0,
+    "Bookings": 103024.0,
+    "Is_Completed": 63967.0
+  },
+  "pivots": {
+    "PT_Q01": {
+      "question": "Q1",
+      "sheet": "Q01_KPIs",
+      "calc_captions": [
+        "Success Rate",
+        "Average Fare (INR)"
+      ],
+      "anchor": null,
+      "grand_total": {
+        "Bookings": 103024.0,
+        "Completed Rides": 63967.0,
+        "Success Rate": 0.6208941605839416,
+        "Revenue (INR)": 35080467.0,
+        "Average Fare (INR)": 548.4150733972205
+      },
+      "cells": {}
+    },
+    "PT_Q02": {
+      "question": "Q2",
+      "sheet": "Q02_Outcome_Mix",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Bookings": 103024.0
+      },
+      "cells": {
+        "Bookings|Canceled by Customer": 10499.0,
+        "Bookings|Canceled by Driver": 18434.0,
+        "Bookings|Driver Not Found": 10124.0,
+        "Bookings|Success": 63967.0
+      }
+    },
+    "PT_Q03": {
+      "question": "Q3",
+      "sheet": "Q03_Daily_Trend",
+      "calc_captions": [
+        "Success Rate"
+      ],
+      "anchor": null,
+      "grand_total": {
+        "Bookings": 103024.0,
+        "Success Rate": 0.6208941605839416
+      },
+      "cells": {
+        "Bookings|2024-07-01": 3351.0,
+        "Bookings|2024-07-02": 3388.0,
+        "Bookings|2024-07-03": 3358.0,
+        "Bookings|2024-07-04": 3274.0,
+        "Bookings|2024-07-05": 3306.0,
+        "Bookings|2024-07-06": 3281.0,
+        "Bookings|2024-07-07": 3223.0,
+        "Bookings|2024-07-08": 3313.0,
+        "Bookings|2024-07-09": 3358.0,
+        "Bookings|2024-07-10": 3375.0,
+        "Bookings|2024-07-11": 3242.0,
+        "Bookings|2024-07-12": 3382.0,
+        "Bookings|2024-07-13": 3409.0,
+        "Bookings|2024-07-14": 3307.0,
+        "Bookings|2024-07-15": 3318.0,
+        "Bookings|2024-07-16": 3371.0,
+        "Bookings|2024-07-17": 3343.0,
+        "Bookings|2024-07-18": 3359.0,
+        "Bookings|2024-07-19": 3319.0,
+        "Bookings|2024-07-20": 3289.0,
+        "Bookings|2024-07-21": 3237.0,
+        "Bookings|2024-07-22": 3377.0,
+        "Bookings|2024-07-23": 3377.0,
+        "Bookings|2024-07-24": 3286.0,
+        "Bookings|2024-07-25": 3361.0,
+        "Bookings|2024-07-26": 3338.0,
+        "Bookings|2024-07-27": 3362.0,
+        "Bookings|2024-07-28": 3246.0,
+        "Bookings|2024-07-29": 3370.0,
+        "Bookings|2024-07-30": 3432.0,
+        "Bookings|2024-07-31": 3072.0,
+        "Success Rate|2024-07-01": 0.6183228886899433,
+        "Success Rate|2024-07-02": 0.6263282172373081,
+        "Success Rate|2024-07-03": 0.6220964860035736,
+        "Success Rate|2024-07-04": 0.6291997556505803,
+        "Success Rate|2024-07-05": 0.6240169388989716,
+        "Success Rate|2024-07-06": 0.6153611703748857,
+        "Success Rate|2024-07-07": 0.6289171579273969,
+        "Success Rate|2024-07-08": 0.6172653184424992,
+        "Success Rate|2024-07-09": 0.6152471709350804,
+        "Success Rate|2024-07-10": 0.6207407407407407,
+        "Success Rate|2024-07-11": 0.6243059839605182,
+        "Success Rate|2024-07-12": 0.6028976936723832,
+        "Success Rate|2024-07-13": 0.6227632736872983,
+        "Success Rate|2024-07-14": 0.6241306319927427,
+        "Success Rate|2024-07-15": 0.6175406871609403,
+        "Success Rate|2024-07-16": 0.625037080984871,
+        "Success Rate|2024-07-17": 0.6126233921627281,
+        "Success Rate|2024-07-18": 0.6147662994938969,
+        "Success Rate|2024-07-19": 0.6360349502862308,
+        "Success Rate|2024-07-20": 0.6266342353298875,
+        "Success Rate|2024-07-21": 0.6175471115230151,
+        "Success Rate|2024-07-22": 0.6185963873260291,
+        "Success Rate|2024-07-23": 0.6185963873260291,
+        "Success Rate|2024-07-24": 0.6262933657942787,
+        "Success Rate|2024-07-25": 0.6280868789050877,
+        "Success Rate|2024-07-26": 0.6186339125224686,
+        "Success Rate|2024-07-27": 0.6287923854848304,
+        "Success Rate|2024-07-28": 0.6149106592729513,
+        "Success Rate|2024-07-29": 0.6038575667655787,
+        "Success Rate|2024-07-30": 0.6258741258741258,
+        "Success Rate|2024-07-31": 0.623046875
+      }
+    },
+    "PT_Q04": {
+      "question": "Q4",
+      "sheet": "Q04_Hourly_Demand",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Bookings": 103024.0
+      },
+      "cells": {
+        "Bookings|00": 4318.0,
+        "Bookings|01": 4329.0,
+        "Bookings|02": 4305.0,
+        "Bookings|03": 4201.0,
+        "Bookings|04": 4263.0,
+        "Bookings|05": 4264.0,
+        "Bookings|06": 4271.0,
+        "Bookings|07": 4304.0,
+        "Bookings|08": 4374.0,
+        "Bookings|09": 4347.0,
+        "Bookings|10": 4334.0,
+        "Bookings|11": 4272.0,
+        "Bookings|12": 4408.0,
+        "Bookings|13": 4285.0,
+        "Bookings|14": 4232.0,
+        "Bookings|15": 4376.0,
+        "Bookings|16": 4261.0,
+        "Bookings|17": 4353.0,
+        "Bookings|18": 4176.0,
+        "Bookings|19": 4271.0,
+        "Bookings|20": 4228.0,
+        "Bookings|21": 4343.0,
+        "Bookings|22": 4283.0,
+        "Bookings|23": 4226.0
+      }
+    },
+    "PT_Q05": {
+      "question": "Q5",
+      "sheet": "Q05_Hourly_Success",
+      "calc_captions": [
+        "Success Rate"
+      ],
+      "anchor": null,
+      "grand_total": {
+        "Success Rate": 0.6208941605839416
+      },
+      "cells": {
+        "Success Rate|00": 0.6313107920333487,
+        "Success Rate|01": 0.623007623007623,
+        "Success Rate|02": 0.6174216027874564,
+        "Success Rate|03": 0.6350868840752202,
+        "Success Rate|04": 0.6218625381186957,
+        "Success Rate|05": 0.6355534709193246,
+        "Success Rate|06": 0.6216342776867244,
+        "Success Rate|07": 0.6105947955390335,
+        "Success Rate|08": 0.6129401005944216,
+        "Success Rate|09": 0.6165171382562686,
+        "Success Rate|10": 0.6035994462390402,
+        "Success Rate|11": 0.6357677902621723,
+        "Success Rate|12": 0.6122958257713249,
+        "Success Rate|13": 0.6254375729288215,
+        "Success Rate|14": 0.6299621928166351,
+        "Success Rate|15": 0.6302559414990859,
+        "Success Rate|16": 0.6169913165923492,
+        "Success Rate|17": 0.6181943487250172,
+        "Success Rate|18": 0.617816091954023,
+        "Success Rate|19": 0.6195270428471084,
+        "Success Rate|20": 0.6118732261116367,
+        "Success Rate|21": 0.6168547087266866,
+        "Success Rate|22": 0.6091524632267102,
+        "Success Rate|23": 0.6287269285376242
+      }
+    },
+    "PT_Q06": {
+      "question": "Q6",
+      "sheet": "Q06_Vehicle_Volume_Revenue",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Bookings": 103024.0,
+        "Revenue (INR)": 35080467.0
+      },
+      "cells": {
+        "Bookings|Auto": 14755.0,
+        "Bookings|Bike": 14662.0,
+        "Bookings|Mini": 14552.0,
+        "Bookings|Prime Plus": 14707.0,
+        "Bookings|Prime SUV": 14655.0,
+        "Bookings|Prime Sedan": 14877.0,
+        "Bookings|eBike": 14816.0,
+        "Revenue (INR)|Auto": 5051846.0,
+        "Revenue (INR)|Bike": 4971968.0,
+        "Revenue (INR)|Mini": 4885961.0,
+        "Revenue (INR)|Prime Plus": 5015165.0,
+        "Revenue (INR)|Prime SUV": 4876815.0,
+        "Revenue (INR)|Prime Sedan": 5224050.0,
+        "Revenue (INR)|eBike": 5054662.0
+      }
+    },
+    "PT_Q07": {
+      "question": "Q7",
+      "sheet": "Q07_Vehicle_Failure_Mix",
+      "calc_captions": [
+        "Customer Cancel Rate",
+        "Driver Cancel Rate",
+        "Driver Not Found Rate",
+        "Success Rate"
+      ],
+      "anchor": null,
+      "grand_total": {
+        "Customer Cancel Rate": 0.10190829321323187,
+        "Driver Cancel Rate": 0.17892918154993012,
+        "Driver Not Found Rate": 0.09826836465289641,
+        "Success Rate": 0.6208941605839416
+      },
+      "cells": {
+        "Customer Cancel Rate|Auto": 0.1018637749915283,
+        "Customer Cancel Rate|Bike": 0.10482880916655299,
+        "Customer Cancel Rate|Mini": 0.10342221000549752,
+        "Customer Cancel Rate|Prime Plus": 0.10022438294689603,
+        "Customer Cancel Rate|Prime SUV": 0.10221767314909587,
+        "Customer Cancel Rate|Prime Sedan": 0.09881024400080661,
+        "Customer Cancel Rate|eBike": 0.10205183585313175,
+        "Driver Cancel Rate|Auto": 0.18129447644866148,
+        "Driver Cancel Rate|Bike": 0.17453280589278405,
+        "Driver Cancel Rate|Mini": 0.17757009345794392,
+        "Driver Cancel Rate|Prime Plus": 0.18243013530971647,
+        "Driver Cancel Rate|Prime SUV": 0.1806891845786421,
+        "Driver Cancel Rate|Prime Sedan": 0.17416145728305438,
+        "Driver Cancel Rate|eBike": 0.1818304535637149,
+        "Driver Not Found Rate|Auto": 0.09556082683835988,
+        "Driver Not Found Rate|Bike": 0.09766743963988542,
+        "Driver Not Found Rate|Mini": 0.09806212204507972,
+        "Driver Not Found Rate|Prime Plus": 0.10029237777928877,
+        "Driver Not Found Rate|Prime SUV": 0.10324121460252474,
+        "Driver Not Found Rate|Prime Sedan": 0.0965920548497681,
+        "Driver Not Found Rate|eBike": 0.09651727861771059,
+        "Success Rate|Auto": 0.6212809217214503,
+        "Success Rate|Bike": 0.6229709453007776,
+        "Success Rate|Mini": 0.6209455744914788,
+        "Success Rate|Prime Plus": 0.6170531039640987,
+        "Success Rate|Prime SUV": 0.6138519276697373,
+        "Success Rate|Prime Sedan": 0.6304362438663709,
+        "Success Rate|eBike": 0.6196004319654428
+      }
+    },
+    "PT_Q08": {
+      "question": "Q8",
+      "sheet": "Q08_Pickup_Areas",
+      "calc_captions": [
+        "Failure Rate"
+      ],
+      "anchor": null,
+      "grand_total": {
+        "Bookings": 103024.0,
+        "Failed Bookings": 39057.0,
+        "Failure Rate": 0.3791058394160584
+      },
+      "cells": {
+        "Bookings|BTM Layout": 2091.0,
+        "Bookings|Banashankari": 2201.0,
+        "Bookings|Bannerghatta Road": 2046.0,
+        "Bookings|Basavanagudi": 2120.0,
+        "Bookings|Bellandur": 2008.0,
+        "Bookings|Chamarajpet": 1981.0,
+        "Bookings|Chickpet": 1994.0,
+        "Bookings|Cox Town": 2100.0,
+        "Bookings|Devanahalli": 1999.0,
+        "Bookings|Electronic City": 2044.0,
+        "Bookings|Frazer Town": 2048.0,
+        "Bookings|HSR Layout": 2042.0,
+        "Bookings|Hebbal": 2058.0,
+        "Bookings|Hennur": 2090.0,
+        "Bookings|Hosur Road": 2074.0,
+        "Bookings|Hulimavu": 2030.0,
+        "Bookings|Indiranagar": 2133.0,
+        "Bookings|JP Nagar": 2039.0,
+        "Bookings|Jayanagar": 1985.0,
+        "Bookings|KR Puram": 2058.0,
+        "Bookings|Kadugodi": 2002.0,
+        "Bookings|Kammanahalli": 2071.0,
+        "Bookings|Kengeri": 2083.0,
+        "Bookings|Koramangala": 2062.0,
+        "Bookings|Langford Town": 2079.0,
+        "Bookings|MG Road": 2048.0,
+        "Bookings|Magadi Road": 2099.0,
+        "Bookings|Majestic": 2067.0,
+        "Bookings|Malleshwaram": 2058.0,
+        "Bookings|Marathahalli": 2027.0,
+        "Bookings|Mysore Road": 2085.0,
+        "Bookings|Nagarbhavi": 2083.0,
+        "Bookings|Padmanabhanagar": 2004.0,
+        "Bookings|Peenya": 2069.0,
+        "Bookings|RT Nagar": 2135.0,
+        "Bookings|Rajajinagar": 1952.0,
+        "Bookings|Rajarajeshwari Nagar": 2037.0,
+        "Bookings|Ramamurthy Nagar": 2116.0,
+        "Bookings|Richmond Town": 2042.0,
+        "Bookings|Sahakar Nagar": 2126.0,
+        "Bookings|Sarjapur Road": 2070.0,
+        "Bookings|Shantinagar": 2012.0,
+        "Bookings|Shivajinagar": 2017.0,
+        "Bookings|Tumkur Road": 2105.0,
+        "Bookings|Ulsoor": 2038.0,
+        "Bookings|Varthur": 2013.0,
+        "Bookings|Vijayanagar": 2113.0,
+        "Bookings|Whitefield": 2087.0,
+        "Bookings|Yelahanka": 2044.0,
+        "Bookings|Yeshwanthpur": 2139.0,
+        "Failed Bookings|BTM Layout": 800.0,
+        "Failed Bookings|Banashankari": 836.0,
+        "Failed Bookings|Bannerghatta Road": 795.0,
+        "Failed Bookings|Basavanagudi": 798.0,
+        "Failed Bookings|Bellandur": 758.0,
+        "Failed Bookings|Chamarajpet": 769.0,
+        "Failed Bookings|Chickpet": 761.0,
+        "Failed Bookings|Cox Town": 765.0,
+        "Failed Bookings|Devanahalli": 774.0,
+        "Failed Bookings|Electronic City": 754.0,
+        "Failed Bookings|Frazer Town": 771.0,
+        "Failed Bookings|HSR Layout": 766.0,
+        "Failed Bookings|Hebbal": 770.0,
+        "Failed Bookings|Hennur": 783.0,
+        "Failed Bookings|Hosur Road": 826.0,
+        "Failed Bookings|Hulimavu": 776.0,
+        "Failed Bookings|Indiranagar": 798.0,
+        "Failed Bookings|JP Nagar": 792.0,
+        "Failed Bookings|Jayanagar": 723.0,
+        "Failed Bookings|KR Puram": 784.0,
+        "Failed Bookings|Kadugodi": 748.0,
+        "Failed Bookings|Kammanahalli": 791.0,
+        "Failed Bookings|Kengeri": 826.0,
+        "Failed Bookings|Koramangala": 743.0,
+        "Failed Bookings|Langford Town": 829.0,
+        "Failed Bookings|MG Road": 749.0,
+        "Failed Bookings|Magadi Road": 777.0,
+        "Failed Bookings|Majestic": 780.0,
+        "Failed Bookings|Malleshwaram": 755.0,
+        "Failed Bookings|Marathahalli": 784.0,
+        "Failed Bookings|Mysore Road": 772.0,
+        "Failed Bookings|Nagarbhavi": 782.0,
+        "Failed Bookings|Padmanabhanagar": 781.0,
+        "Failed Bookings|Peenya": 801.0,
+        "Failed Bookings|RT Nagar": 814.0,
+        "Failed Bookings|Rajajinagar": 739.0,
+        "Failed Bookings|Rajarajeshwari Nagar": 754.0,
+        "Failed Bookings|Ramamurthy Nagar": 778.0,
+        "Failed Bookings|Richmond Town": 767.0,
+        "Failed Bookings|Sahakar Nagar": 818.0,
+        "Failed Bookings|Sarjapur Road": 797.0,
+        "Failed Bookings|Shantinagar": 753.0,
+        "Failed Bookings|Shivajinagar": 767.0,
+        "Failed Bookings|Tumkur Road": 836.0,
+        "Failed Bookings|Ulsoor": 748.0,
+        "Failed Bookings|Varthur": 743.0,
+        "Failed Bookings|Vijayanagar": 849.0,
+        "Failed Bookings|Whitefield": 795.0,
+        "Failed Bookings|Yelahanka": 796.0,
+        "Failed Bookings|Yeshwanthpur": 786.0,
+        "Failure Rate|BTM Layout": 0.3825920612147298,
+        "Failure Rate|Banashankari": 0.3798273512039982,
+        "Failure Rate|Bannerghatta Road": 0.3885630498533724,
+        "Failure Rate|Basavanagudi": 0.37641509433962267,
+        "Failure Rate|Bellandur": 0.37749003984063745,
+        "Failure Rate|Chamarajpet": 0.38818778394750125,
+        "Failure Rate|Chickpet": 0.38164493480441325,
+        "Failure Rate|Cox Town": 0.36428571428571427,
+        "Failure Rate|Devanahalli": 0.3871935967983992,
+        "Failure Rate|Electronic City": 0.36888454011741684,
+        "Failure Rate|Frazer Town": 0.37646484375,
+        "Failure Rate|HSR Layout": 0.3751224289911851,
+        "Failure Rate|Hebbal": 0.3741496598639456,
+        "Failure Rate|Hennur": 0.37464114832535883,
+        "Failure Rate|Hosur Road": 0.3982642237222758,
+        "Failure Rate|Hulimavu": 0.38226600985221676,
+        "Failure Rate|Indiranagar": 0.37412095639943743,
+        "Failure Rate|JP Nagar": 0.3884256988719961,
+        "Failure Rate|Jayanagar": 0.3642317380352645,
+        "Failure Rate|KR Puram": 0.38095238095238093,
+        "Failure Rate|Kadugodi": 0.37362637362637363,
+        "Failure Rate|Kammanahalli": 0.38194109126026077,
+        "Failure Rate|Kengeri": 0.3965434469515122,
+        "Failure Rate|Koramangala": 0.3603297769156159,
+        "Failure Rate|Langford Town": 0.39874939874939874,
+        "Failure Rate|MG Road": 0.36572265625,
+        "Failure Rate|Magadi Road": 0.3701762744163888,
+        "Failure Rate|Majestic": 0.37735849056603776,
+        "Failure Rate|Malleshwaram": 0.36686103012633625,
+        "Failure Rate|Marathahalli": 0.3867784903798717,
+        "Failure Rate|Mysore Road": 0.37026378896882495,
+        "Failure Rate|Nagarbhavi": 0.3754200672107537,
+        "Failure Rate|Padmanabhanagar": 0.3897205588822355,
+        "Failure Rate|Peenya": 0.3871435476075399,
+        "Failure Rate|RT Nagar": 0.3812646370023419,
+        "Failure Rate|Rajajinagar": 0.3785860655737705,
+        "Failure Rate|Rajarajeshwari Nagar": 0.3701521845851743,
+        "Failure Rate|Ramamurthy Nagar": 0.3676748582230624,
+        "Failure Rate|Richmond Town": 0.37561214495592554,
+        "Failure Rate|Sahakar Nagar": 0.3847601128880527,
+        "Failure Rate|Sarjapur Road": 0.385024154589372,
+        "Failure Rate|Shantinagar": 0.3742544731610338,
+        "Failure Rate|Shivajinagar": 0.3802677243430838,
+        "Failure Rate|Tumkur Road": 0.3971496437054632,
+        "Failure Rate|Ulsoor": 0.36702649656526004,
+        "Failure Rate|Varthur": 0.3691008445106806,
+        "Failure Rate|Vijayanagar": 0.40179839091339326,
+        "Failure Rate|Whitefield": 0.38092956396741734,
+        "Failure Rate|Yelahanka": 0.38943248532289626,
+        "Failure Rate|Yeshwanthpur": 0.36746143057503505
+      }
+    },
+    "PT_Q09": {
+      "question": "Q9",
+      "sheet": "Q09_Customer_Cancel_Reasons",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Customer Cancellations": 10499.0
+      },
+      "cells": {
+        "Customer Cancellations|AC is Not working": 1568.0,
+        "Customer Cancellations|Change of plans": 2081.0,
+        "Customer Cancellations|Driver asked to cancel": 2670.0,
+        "Customer Cancellations|Driver is not moving towards pickup location": 3175.0,
+        "Customer Cancellations|Not a customer cancellation": 0.0,
+        "Customer Cancellations|Wrong Address": 1005.0
+      }
+    },
+    "PT_Q10": {
+      "question": "Q10",
+      "sheet": "Q10_Driver_Cancel_Reasons",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Driver Cancellations": 18434.0
+      },
+      "cells": {
+        "Driver Cancellations|Customer related issue": 5413.0,
+        "Driver Cancellations|Customer was coughing/sick": 3654.0,
+        "Driver Cancellations|More than permitted people in there": 2825.0,
+        "Driver Cancellations|Not a driver cancellation": 0.0,
+        "Driver Cancellations|Personal & Car related issue": 6542.0
+      }
+    },
+    "PT_Q11": {
+      "question": "Q11",
+      "sheet": "Q11_Quoted_Value_Lost",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Quoted Value Lost (INR)": 21454147.0
+      },
+      "cells": {
+        "Quoted Value Lost (INR)|Canceled by Customer": 5770901.0,
+        "Quoted Value Lost (INR)|Canceled by Driver": 10183427.0,
+        "Quoted Value Lost (INR)|Driver Not Found": 5499819.0,
+        "Quoted Value Lost (INR)|Success": 0.0
+      }
+    },
+    "PT_Q12": {
+      "question": "Q12",
+      "sheet": "Q12_Vehicle_Service_Quality",
+      "calc_captions": [],
+      "anchor": null,
+      "grand_total": {
+        "Avg Vehicle TAT (min)": 2.847948390576391,
+        "Avg Customer TAT (min)": 1.4145575484234059,
+        "Avg Driver Rating": 3.9974565010083327,
+        "Avg Customer Rating": 3.998313192740006
+      },
+      "cells": {
+        "Avg Vehicle TAT (min)|Auto": 2.861635235082361,
+        "Avg Vehicle TAT (min)|Bike": 2.8512056601707902,
+        "Avg Vehicle TAT (min)|Mini": 2.8769501106684374,
+        "Avg Vehicle TAT (min)|Prime Plus": 2.8535050137741047,
+        "Avg Vehicle TAT (min)|Prime SUV": 2.8137978212538908,
+        "Avg Vehicle TAT (min)|Prime Sedan": 2.8440341187759888,
+        "Avg Vehicle TAT (min)|eBike": 2.8344653159041395,
+        "Avg Customer TAT (min)|Auto": 1.4223044507472458,
+        "Avg Customer TAT (min)|Bike": 1.4186024523757388,
+        "Avg Customer TAT (min)|Mini": 1.407473494909252,
+        "Avg Customer TAT (min)|Prime Plus": 1.4124716694214876,
+        "Avg Customer TAT (min)|Prime SUV": 1.4007813250333483,
+        "Avg Customer TAT (min)|Prime Sedan": 1.423313594199808,
+        "Avg Customer TAT (min)|eBike": 1.4163861764705883,
+        "Avg Driver Rating|Auto": 4.003938038616777,
+        "Avg Driver Rating|Bike": 3.9846507554193127,
+        "Avg Driver Rating|Mini": 3.992806551571492,
+        "Avg Driver Rating|Prime Plus": 3.9977851239669424,
+        "Avg Driver Rating|Prime SUV": 4.005780346820809,
+        "Avg Driver Rating|Prime Sedan": 3.9906813093080284,
+        "Avg Driver Rating|eBike": 4.006742919389978,
+        "Avg Customer Rating|Auto": 3.998810952329006,
+        "Avg Customer Rating|Bike": 3.9933763958835122,
+        "Avg Customer Rating|Mini": 3.9977312970340857,
+        "Avg Customer Rating|Prime Plus": 4.009498622589532,
+        "Avg Customer Rating|Prime SUV": 3.9993775011116055,
+        "Avg Customer Rating|Prime Sedan": 4.001588655506984,
+        "Avg Customer Rating|eBike": 3.987854030501089
+      }
+    }
+  },
+  "cell_checks": [
+    {
+      "sheet": "Dashboard",
+      "cell": "A5",
+      "pivot": "PT_Q01",
+      "key": "Bookings",
+      "expected": 103024.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "G5",
+      "pivot": "PT_Q01",
+      "key": "Completed Rides",
+      "expected": 63967.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "M5",
+      "pivot": "PT_Q01",
+      "key": "Success Rate",
+      "expected": 0.6208941605839416,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "S5",
+      "pivot": "PT_Q01",
+      "key": "Revenue (INR)",
+      "expected": 35080467.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "A8",
+      "pivot": "PT_Q01",
+      "key": "Average Fare (INR)",
+      "expected": 548.4150733972205,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "G8",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings",
+      "expected": 39057.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "M8",
+      "pivot": "PT_Q10",
+      "key": "Driver Cancellations",
+      "expected": 18434.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard",
+      "cell": "S8",
+      "pivot": "PT_Q11",
+      "key": "Quoted Value Lost (INR)",
+      "expected": 21454147.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B5",
+      "pivot": "PT_Q02",
+      "key": "Bookings|Canceled by Customer",
+      "expected": 10499.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B6",
+      "pivot": "PT_Q02",
+      "key": "Bookings|Canceled by Driver",
+      "expected": 18434.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B7",
+      "pivot": "PT_Q02",
+      "key": "Bookings|Driver Not Found",
+      "expected": 10124.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B8",
+      "pivot": "PT_Q02",
+      "key": "Bookings|Success",
+      "expected": 63967.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B13",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-01",
+      "expected": 3351.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C13",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-01",
+      "expected": 0.6183228886899433,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B14",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-02",
+      "expected": 3388.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C14",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-02",
+      "expected": 0.6263282172373081,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B15",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-03",
+      "expected": 3358.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C15",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-03",
+      "expected": 0.6220964860035736,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B16",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-04",
+      "expected": 3274.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C16",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-04",
+      "expected": 0.6291997556505803,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B17",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-05",
+      "expected": 3306.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C17",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-05",
+      "expected": 0.6240169388989716,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B18",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-06",
+      "expected": 3281.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C18",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-06",
+      "expected": 0.6153611703748857,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B19",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-07",
+      "expected": 3223.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C19",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-07",
+      "expected": 0.6289171579273969,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B20",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-08",
+      "expected": 3313.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C20",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-08",
+      "expected": 0.6172653184424992,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B21",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-09",
+      "expected": 3358.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C21",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-09",
+      "expected": 0.6152471709350804,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B22",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-10",
+      "expected": 3375.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C22",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-10",
+      "expected": 0.6207407407407407,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B23",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-11",
+      "expected": 3242.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C23",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-11",
+      "expected": 0.6243059839605182,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B24",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-12",
+      "expected": 3382.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C24",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-12",
+      "expected": 0.6028976936723832,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B25",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-13",
+      "expected": 3409.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C25",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-13",
+      "expected": 0.6227632736872983,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B26",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-14",
+      "expected": 3307.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C26",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-14",
+      "expected": 0.6241306319927427,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B27",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-15",
+      "expected": 3318.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C27",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-15",
+      "expected": 0.6175406871609403,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B28",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-16",
+      "expected": 3371.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C28",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-16",
+      "expected": 0.625037080984871,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B29",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-17",
+      "expected": 3343.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C29",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-17",
+      "expected": 0.6126233921627281,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B30",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-18",
+      "expected": 3359.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C30",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-18",
+      "expected": 0.6147662994938969,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B31",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-19",
+      "expected": 3319.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C31",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-19",
+      "expected": 0.6360349502862308,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B32",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-20",
+      "expected": 3289.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C32",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-20",
+      "expected": 0.6266342353298875,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B33",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-21",
+      "expected": 3237.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C33",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-21",
+      "expected": 0.6175471115230151,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B34",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-22",
+      "expected": 3377.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C34",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-22",
+      "expected": 0.6185963873260291,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B35",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-23",
+      "expected": 3377.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C35",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-23",
+      "expected": 0.6185963873260291,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B36",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-24",
+      "expected": 3286.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C36",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-24",
+      "expected": 0.6262933657942787,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B37",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-25",
+      "expected": 3361.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C37",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-25",
+      "expected": 0.6280868789050877,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B38",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-26",
+      "expected": 3338.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C38",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-26",
+      "expected": 0.6186339125224686,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B39",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-27",
+      "expected": 3362.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C39",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-27",
+      "expected": 0.6287923854848304,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B40",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-28",
+      "expected": 3246.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C40",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-28",
+      "expected": 0.6149106592729513,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B41",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-29",
+      "expected": 3370.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C41",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-29",
+      "expected": 0.6038575667655787,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B42",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-30",
+      "expected": 3432.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C42",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-30",
+      "expected": 0.6258741258741258,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B43",
+      "pivot": "PT_Q03",
+      "key": "Bookings|2024-07-31",
+      "expected": 3072.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C43",
+      "pivot": "PT_Q03",
+      "key": "Success Rate|2024-07-31",
+      "expected": 0.623046875,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B48",
+      "pivot": "PT_Q04",
+      "key": "Bookings|00",
+      "expected": 4318.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B49",
+      "pivot": "PT_Q04",
+      "key": "Bookings|01",
+      "expected": 4329.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B50",
+      "pivot": "PT_Q04",
+      "key": "Bookings|02",
+      "expected": 4305.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B51",
+      "pivot": "PT_Q04",
+      "key": "Bookings|03",
+      "expected": 4201.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B52",
+      "pivot": "PT_Q04",
+      "key": "Bookings|04",
+      "expected": 4263.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B53",
+      "pivot": "PT_Q04",
+      "key": "Bookings|05",
+      "expected": 4264.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B54",
+      "pivot": "PT_Q04",
+      "key": "Bookings|06",
+      "expected": 4271.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B55",
+      "pivot": "PT_Q04",
+      "key": "Bookings|07",
+      "expected": 4304.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B56",
+      "pivot": "PT_Q04",
+      "key": "Bookings|08",
+      "expected": 4374.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B57",
+      "pivot": "PT_Q04",
+      "key": "Bookings|09",
+      "expected": 4347.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B58",
+      "pivot": "PT_Q04",
+      "key": "Bookings|10",
+      "expected": 4334.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B59",
+      "pivot": "PT_Q04",
+      "key": "Bookings|11",
+      "expected": 4272.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B60",
+      "pivot": "PT_Q04",
+      "key": "Bookings|12",
+      "expected": 4408.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B61",
+      "pivot": "PT_Q04",
+      "key": "Bookings|13",
+      "expected": 4285.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B62",
+      "pivot": "PT_Q04",
+      "key": "Bookings|14",
+      "expected": 4232.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B63",
+      "pivot": "PT_Q04",
+      "key": "Bookings|15",
+      "expected": 4376.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B64",
+      "pivot": "PT_Q04",
+      "key": "Bookings|16",
+      "expected": 4261.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B65",
+      "pivot": "PT_Q04",
+      "key": "Bookings|17",
+      "expected": 4353.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B66",
+      "pivot": "PT_Q04",
+      "key": "Bookings|18",
+      "expected": 4176.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B67",
+      "pivot": "PT_Q04",
+      "key": "Bookings|19",
+      "expected": 4271.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B68",
+      "pivot": "PT_Q04",
+      "key": "Bookings|20",
+      "expected": 4228.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B69",
+      "pivot": "PT_Q04",
+      "key": "Bookings|21",
+      "expected": 4343.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B70",
+      "pivot": "PT_Q04",
+      "key": "Bookings|22",
+      "expected": 4283.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B71",
+      "pivot": "PT_Q04",
+      "key": "Bookings|23",
+      "expected": 4226.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B76",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|00",
+      "expected": 0.6313107920333487,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B77",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|01",
+      "expected": 0.623007623007623,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B78",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|02",
+      "expected": 0.6174216027874564,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B79",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|03",
+      "expected": 0.6350868840752202,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B80",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|04",
+      "expected": 0.6218625381186957,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B81",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|05",
+      "expected": 0.6355534709193246,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B82",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|06",
+      "expected": 0.6216342776867244,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B83",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|07",
+      "expected": 0.6105947955390335,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B84",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|08",
+      "expected": 0.6129401005944216,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B85",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|09",
+      "expected": 0.6165171382562686,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B86",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|10",
+      "expected": 0.6035994462390402,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B87",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|11",
+      "expected": 0.6357677902621723,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B88",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|12",
+      "expected": 0.6122958257713249,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B89",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|13",
+      "expected": 0.6254375729288215,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B90",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|14",
+      "expected": 0.6299621928166351,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B91",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|15",
+      "expected": 0.6302559414990859,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B92",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|16",
+      "expected": 0.6169913165923492,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B93",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|17",
+      "expected": 0.6181943487250172,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B94",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|18",
+      "expected": 0.617816091954023,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B95",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|19",
+      "expected": 0.6195270428471084,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B96",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|20",
+      "expected": 0.6118732261116367,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B97",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|21",
+      "expected": 0.6168547087266866,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B98",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|22",
+      "expected": 0.6091524632267102,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B99",
+      "pivot": "PT_Q05",
+      "key": "Success Rate|23",
+      "expected": 0.6287269285376242,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B104",
+      "pivot": "PT_Q06",
+      "key": "Bookings|Auto",
+      "expected": 14755.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C104",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|Auto",
+      "expected": 5051846.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B105",
+      "pivot": "PT_Q06",
+      "key": "Bookings|Bike",
+      "expected": 14662.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C105",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|Bike",
+      "expected": 4971968.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B106",
+      "pivot": "PT_Q06",
+      "key": "Bookings|Mini",
+      "expected": 14552.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C106",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|Mini",
+      "expected": 4885961.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B107",
+      "pivot": "PT_Q06",
+      "key": "Bookings|Prime Plus",
+      "expected": 14707.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C107",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|Prime Plus",
+      "expected": 5015165.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B108",
+      "pivot": "PT_Q06",
+      "key": "Bookings|Prime SUV",
+      "expected": 14655.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C108",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|Prime SUV",
+      "expected": 4876815.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B109",
+      "pivot": "PT_Q06",
+      "key": "Bookings|Prime Sedan",
+      "expected": 14877.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C109",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|Prime Sedan",
+      "expected": 5224050.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B110",
+      "pivot": "PT_Q06",
+      "key": "Bookings|eBike",
+      "expected": 14816.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C110",
+      "pivot": "PT_Q06",
+      "key": "Revenue (INR)|eBike",
+      "expected": 5054662.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B115",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|Auto",
+      "expected": 0.1018637749915283,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C115",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|Auto",
+      "expected": 0.18129447644866148,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D115",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|Auto",
+      "expected": 0.09556082683835988,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E115",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|Auto",
+      "expected": 0.6212809217214503,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B116",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|Bike",
+      "expected": 0.10482880916655299,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C116",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|Bike",
+      "expected": 0.17453280589278405,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D116",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|Bike",
+      "expected": 0.09766743963988542,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E116",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|Bike",
+      "expected": 0.6229709453007776,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B117",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|Mini",
+      "expected": 0.10342221000549752,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C117",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|Mini",
+      "expected": 0.17757009345794392,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D117",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|Mini",
+      "expected": 0.09806212204507972,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E117",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|Mini",
+      "expected": 0.6209455744914788,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B118",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|Prime Plus",
+      "expected": 0.10022438294689603,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C118",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|Prime Plus",
+      "expected": 0.18243013530971647,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D118",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|Prime Plus",
+      "expected": 0.10029237777928877,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E118",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|Prime Plus",
+      "expected": 0.6170531039640987,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B119",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|Prime SUV",
+      "expected": 0.10221767314909587,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C119",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|Prime SUV",
+      "expected": 0.1806891845786421,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D119",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|Prime SUV",
+      "expected": 0.10324121460252474,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E119",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|Prime SUV",
+      "expected": 0.6138519276697373,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B120",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|Prime Sedan",
+      "expected": 0.09881024400080661,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C120",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|Prime Sedan",
+      "expected": 0.17416145728305438,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D120",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|Prime Sedan",
+      "expected": 0.0965920548497681,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E120",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|Prime Sedan",
+      "expected": 0.6304362438663709,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B121",
+      "pivot": "PT_Q07",
+      "key": "Customer Cancel Rate|eBike",
+      "expected": 0.10205183585313175,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C121",
+      "pivot": "PT_Q07",
+      "key": "Driver Cancel Rate|eBike",
+      "expected": 0.1818304535637149,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D121",
+      "pivot": "PT_Q07",
+      "key": "Driver Not Found Rate|eBike",
+      "expected": 0.09651727861771059,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E121",
+      "pivot": "PT_Q07",
+      "key": "Success Rate|eBike",
+      "expected": 0.6196004319654428,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B126",
+      "pivot": "PT_Q09",
+      "key": "Customer Cancellations|AC is Not working",
+      "expected": 1568.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B127",
+      "pivot": "PT_Q09",
+      "key": "Customer Cancellations|Change of plans",
+      "expected": 2081.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B128",
+      "pivot": "PT_Q09",
+      "key": "Customer Cancellations|Driver asked to cancel",
+      "expected": 2670.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B129",
+      "pivot": "PT_Q09",
+      "key": "Customer Cancellations|Driver is not moving towards pickup location",
+      "expected": 3175.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B130",
+      "pivot": "PT_Q09",
+      "key": "Customer Cancellations|Not a customer cancellation",
+      "expected": 0.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B131",
+      "pivot": "PT_Q09",
+      "key": "Customer Cancellations|Wrong Address",
+      "expected": 1005.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B136",
+      "pivot": "PT_Q10",
+      "key": "Driver Cancellations|Customer related issue",
+      "expected": 5413.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B137",
+      "pivot": "PT_Q10",
+      "key": "Driver Cancellations|Customer was coughing/sick",
+      "expected": 3654.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B138",
+      "pivot": "PT_Q10",
+      "key": "Driver Cancellations|More than permitted people in there",
+      "expected": 2825.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B139",
+      "pivot": "PT_Q10",
+      "key": "Driver Cancellations|Not a driver cancellation",
+      "expected": 0.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B140",
+      "pivot": "PT_Q10",
+      "key": "Driver Cancellations|Personal & Car related issue",
+      "expected": 6542.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B145",
+      "pivot": "PT_Q11",
+      "key": "Quoted Value Lost (INR)|Canceled by Customer",
+      "expected": 5770901.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B146",
+      "pivot": "PT_Q11",
+      "key": "Quoted Value Lost (INR)|Canceled by Driver",
+      "expected": 10183427.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B147",
+      "pivot": "PT_Q11",
+      "key": "Quoted Value Lost (INR)|Driver Not Found",
+      "expected": 5499819.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B148",
+      "pivot": "PT_Q11",
+      "key": "Quoted Value Lost (INR)|Success",
+      "expected": 0.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B153",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|Auto",
+      "expected": 2.861635235082361,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C153",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|Auto",
+      "expected": 1.4223044507472458,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D153",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|Auto",
+      "expected": 4.003938038616777,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E153",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|Auto",
+      "expected": 3.998810952329006,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B154",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|Bike",
+      "expected": 2.8512056601707902,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C154",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|Bike",
+      "expected": 1.4186024523757388,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D154",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|Bike",
+      "expected": 3.9846507554193127,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E154",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|Bike",
+      "expected": 3.9933763958835122,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B155",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|Mini",
+      "expected": 2.8769501106684374,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C155",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|Mini",
+      "expected": 1.407473494909252,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D155",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|Mini",
+      "expected": 3.992806551571492,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E155",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|Mini",
+      "expected": 3.9977312970340857,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B156",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|Prime Plus",
+      "expected": 2.8535050137741047,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C156",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|Prime Plus",
+      "expected": 1.4124716694214876,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D156",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|Prime Plus",
+      "expected": 3.9977851239669424,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E156",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|Prime Plus",
+      "expected": 4.009498622589532,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B157",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|Prime SUV",
+      "expected": 2.8137978212538908,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C157",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|Prime SUV",
+      "expected": 1.4007813250333483,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D157",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|Prime SUV",
+      "expected": 4.005780346820809,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E157",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|Prime SUV",
+      "expected": 3.9993775011116055,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B158",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|Prime Sedan",
+      "expected": 2.8440341187759888,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C158",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|Prime Sedan",
+      "expected": 1.423313594199808,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D158",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|Prime Sedan",
+      "expected": 3.9906813093080284,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E158",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|Prime Sedan",
+      "expected": 4.001588655506984,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B159",
+      "pivot": "PT_Q12",
+      "key": "Avg Vehicle TAT (min)|eBike",
+      "expected": 2.8344653159041395,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C159",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer TAT (min)|eBike",
+      "expected": 1.4163861764705883,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D159",
+      "pivot": "PT_Q12",
+      "key": "Avg Driver Rating|eBike",
+      "expected": 4.006742919389978,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "E159",
+      "pivot": "PT_Q12",
+      "key": "Avg Customer Rating|eBike",
+      "expected": 3.987854030501089,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B164",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Banashankari",
+      "expected": 2201.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C164",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Banashankari",
+      "expected": 836.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D164",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Banashankari",
+      "expected": 0.3798273512039982,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B165",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Yeshwanthpur",
+      "expected": 2139.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C165",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Yeshwanthpur",
+      "expected": 786.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D165",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Yeshwanthpur",
+      "expected": 0.36746143057503505,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B166",
+      "pivot": "PT_Q08",
+      "key": "Bookings|RT Nagar",
+      "expected": 2135.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C166",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|RT Nagar",
+      "expected": 814.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D166",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|RT Nagar",
+      "expected": 0.3812646370023419,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B167",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Indiranagar",
+      "expected": 2133.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C167",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Indiranagar",
+      "expected": 798.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D167",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Indiranagar",
+      "expected": 0.37412095639943743,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B168",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Sahakar Nagar",
+      "expected": 2126.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C168",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Sahakar Nagar",
+      "expected": 818.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D168",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Sahakar Nagar",
+      "expected": 0.3847601128880527,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B169",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Basavanagudi",
+      "expected": 2120.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C169",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Basavanagudi",
+      "expected": 798.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D169",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Basavanagudi",
+      "expected": 0.37641509433962267,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B170",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Ramamurthy Nagar",
+      "expected": 2116.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C170",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Ramamurthy Nagar",
+      "expected": 778.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D170",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Ramamurthy Nagar",
+      "expected": 0.3676748582230624,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B171",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Vijayanagar",
+      "expected": 2113.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C171",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Vijayanagar",
+      "expected": 849.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D171",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Vijayanagar",
+      "expected": 0.40179839091339326,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B172",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Tumkur Road",
+      "expected": 2105.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C172",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Tumkur Road",
+      "expected": 836.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D172",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Tumkur Road",
+      "expected": 0.3971496437054632,
+      "calc": true
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "B173",
+      "pivot": "PT_Q08",
+      "key": "Bookings|Cox Town",
+      "expected": 2100.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "C173",
+      "pivot": "PT_Q08",
+      "key": "Failed Bookings|Cox Town",
+      "expected": 765.0,
+      "calc": false
+    },
+    {
+      "sheet": "Dashboard_Data",
+      "cell": "D173",
+      "pivot": "PT_Q08",
+      "key": "Failure Rate|Cox Town",
+      "expected": 0.36428571428571427,
+      "calc": true
+    }
+  ]
+}

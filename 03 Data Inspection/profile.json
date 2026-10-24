@@ -1,0 +1,419 @@
+{
+  "files": [
+    {
+      "file": "Raw Data/ola.csv",
+      "bytes": 21445921,
+      "tables": [
+        {
+          "table": "ola",
+          "rows": 103024,
+          "columns": 21,
+          "column_names": [
+            "Date",
+            "Time",
+            "Booking_ID",
+            "Booking_Status",
+            "Customer_ID",
+            "Vehicle_Type",
+            "Pickup_Location",
+            "Drop_Location",
+            "V_TAT",
+            "C_TAT",
+            "Canceled_Rides_by_Customer",
+            "Canceled_Rides_by_Driver",
+            "Incomplete_Rides",
+            "Incomplete_Rides_Reason",
+            "Booking_Value",
+            "Payment_Method",
+            "Ride_Distance",
+            "Driver_Ratings",
+            "Customer_Rating",
+            "Vehicle Images",
+            "Unnamed: 20"
+          ],
+          "fully_duplicate_rows": 0,
+          "likely_keys": [
+            "Booking_ID"
+          ],
+          "likely_composite_keys": [],
+          "date_fields": [
+            "Date"
+          ],
+          "measures": [
+            "V_TAT",
+            "C_TAT",
+            "Booking_Value",
+            "Ride_Distance",
+            "Driver_Ratings",
+            "Customer_Rating"
+          ],
+          "dimensions": [
+            "Time",
+            "Booking_Status",
+            "Vehicle_Type",
+            "Pickup_Location",
+            "Drop_Location",
+            "Canceled_Rides_by_Customer",
+            "Canceled_Rides_by_Driver",
+            "Incomplete_Rides",
+            "Incomplete_Rides_Reason",
+            "Payment_Method",
+            "Vehicle Images"
+          ],
+          "identifiers": [
+            "Booking_ID",
+            "Customer_ID"
+          ],
+          "column_detail": [
+            {
+              "column": "Date",
+              "type": "date as text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 40214,
+              "samples": [
+                "2024-07-26 14:00:00",
+                "2024-07-25 22:20:00",
+                "2024-07-30 19:59:00",
+                "2024-07-22 3:15:00",
+                "2024-07-02 9:02:00"
+              ],
+              "role": "date"
+            },
+            {
+              "column": "Time",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 1440,
+              "samples": [
+                "14:00:00",
+                "22:20:00",
+                "19:59:00",
+                "03:15:00",
+                "09:02:00"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Booking_ID",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 103024,
+              "samples": [
+                "CNR7153255142",
+                "CNR2940424040",
+                "CNR2982357879",
+                "CNR2395710036",
+                "CNR1797421769"
+              ],
+              "role": "identifier"
+            },
+            {
+              "column": "Booking_Status",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 4,
+              "samples": [
+                "Canceled by Driver",
+                "Success",
+                "Canceled by Customer",
+                "Driver Not Found"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Customer_ID",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 94544,
+              "samples": [
+                "CID713523",
+                "CID225428",
+                "CID270156",
+                "CID581320",
+                "CID939555"
+              ],
+              "role": "identifier"
+            },
+            {
+              "column": "Vehicle_Type",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 7,
+              "samples": [
+                "Prime Sedan",
+                "Bike",
+                "Prime SUV",
+                "eBike",
+                "Mini"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Pickup_Location",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 50,
+              "samples": [
+                "Tumkur Road",
+                "Magadi Road",
+                "Sahakar Nagar",
+                "HSR Layout",
+                "Rajajinagar"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Drop_Location",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 50,
+              "samples": [
+                "RT Nagar",
+                "Varthur",
+                "Vijayanagar",
+                "Chamarajpet",
+                "Whitefield"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "V_TAT",
+              "type": "integer (stored as float)",
+              "non_null": 63967,
+              "nulls": 39057,
+              "null_pct": 37.91,
+              "distinct": 40,
+              "samples": [
+                "203.0",
+                "238.0",
+                "252.0",
+                "231.0",
+                "133.0"
+              ],
+              "min": 35.0,
+              "max": 308.0,
+              "sum": 10930486.0,
+              "mean": 170.87695217846704,
+              "role": "measure"
+            },
+            {
+              "column": "C_TAT",
+              "type": "integer (stored as float)",
+              "non_null": 63967,
+              "nulls": 39057,
+              "null_pct": 37.91,
+              "distinct": 25,
+              "samples": [
+                "30.0",
+                "130.0",
+                "80.0",
+                "90.0",
+                "40.0"
+              ],
+              "min": 25.0,
+              "max": 145.0,
+              "sum": 5429095.0,
+              "mean": 84.87337220754452,
+              "role": "measure"
+            },
+            {
+              "column": "Canceled_Rides_by_Customer",
+              "type": "text",
+              "non_null": 10499,
+              "nulls": 92525,
+              "null_pct": 89.81,
+              "distinct": 5,
+              "samples": [
+                "Driver is not moving towards pickup location",
+                "Driver asked to cancel",
+                "AC is Not working",
+                "Change of plans",
+                "Wrong Address"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Canceled_Rides_by_Driver",
+              "type": "text",
+              "non_null": 18434,
+              "nulls": 84590,
+              "null_pct": 82.11,
+              "distinct": 4,
+              "samples": [
+                "Personal & Car related issue",
+                "Customer was coughing/sick",
+                "Customer related issue",
+                "More than permitted people in there"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Incomplete_Rides",
+              "type": "text",
+              "non_null": 63967,
+              "nulls": 39057,
+              "null_pct": 37.91,
+              "distinct": 2,
+              "samples": [
+                "No",
+                "Yes"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Incomplete_Rides_Reason",
+              "type": "text",
+              "non_null": 3926,
+              "nulls": 99098,
+              "null_pct": 96.19,
+              "distinct": 3,
+              "samples": [
+                "Customer Demand",
+                "Vehicle Breakdown",
+                "Other Issue"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Booking_Value",
+              "type": "integer",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 2883,
+              "samples": [
+                "444",
+                "158",
+                "386",
+                "384",
+                "822"
+              ],
+              "min": 100.0,
+              "max": 2999.0,
+              "sum": 56534614.0,
+              "mean": 548.7518830563752,
+              "role": "measure"
+            },
+            {
+              "column": "Payment_Method",
+              "type": "text",
+              "non_null": 63967,
+              "nulls": 39057,
+              "null_pct": 37.91,
+              "distinct": 4,
+              "samples": [
+                "Cash",
+                "UPI",
+                "Credit Card",
+                "Debit Card"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Ride_Distance",
+              "type": "integer",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 50,
+              "samples": [
+                "0",
+                "13",
+                "40",
+                "45",
+                "41"
+              ],
+              "min": 0.0,
+              "max": 49.0,
+              "sum": 1461903.0,
+              "mean": 14.189926619040223,
+              "role": "measure"
+            },
+            {
+              "column": "Driver_Ratings",
+              "type": "decimal",
+              "non_null": 63967,
+              "nulls": 39057,
+              "null_pct": 37.91,
+              "distinct": 21,
+              "samples": [
+                "4.1",
+                "4.2",
+                "4.0",
+                "3.4",
+                "3.2"
+              ],
+              "min": 3.0,
+              "max": 5.0,
+              "sum": 255705.30000000002,
+              "mean": 3.9974565010083327,
+              "role": "measure"
+            },
+            {
+              "column": "Customer_Rating",
+              "type": "decimal",
+              "non_null": 63967,
+              "nulls": 39057,
+              "null_pct": 37.91,
+              "distinct": 21,
+              "samples": [
+                "4.0",
+                "4.8",
+                "3.0",
+                "4.6",
+                "4.5"
+              ],
+              "min": 3.0,
+              "max": 5.0,
+              "sum": 255760.09999999998,
+              "mean": 3.998313192740006,
+              "role": "measure"
+            },
+            {
+              "column": "Vehicle Images",
+              "type": "text",
+              "non_null": 103024,
+              "nulls": 0,
+              "null_pct": 0.0,
+              "distinct": 7,
+              "samples": [
+                "https://cdn-icons-png.flaticon.com/128/14183/14183770.png",
+                "https://cdn-icons-png.flaticon.com/128/9983/9983173.png",
+                "https://cdn-icons-png.flaticon.com/128/9983/9983204.png",
+                "https://cdn-icons-png.flaticon.com/128/6839/6839867.png",
+                "https://cdn-icons-png.flaticon.com/128/3202/3202926.png"
+              ],
+              "role": "dimension"
+            },
+            {
+              "column": "Unnamed: 20",
+              "type": "empty",
+              "non_null": 0,
+              "nulls": 103024,
+              "null_pct": 100.0,
+              "distinct": 0,
+              "samples": [],
+              "role": "other"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

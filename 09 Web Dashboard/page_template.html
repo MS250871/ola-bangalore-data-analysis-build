@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ola Bengaluru Rides Dashboard (July 2024)</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1c2430;--mut:#5b6675;--line:#d9dee5;--c1:#2f6fdb;--c2:#e08a1e;--c3:#c8443f;--c4:#2e9e6b;--c5:#7a5bd1;--bar:#2f6fdb}
+@media (prefers-color-scheme:dark){:root{--bg:#10151c;--card:#19212b;--ink:#e8edf3;--mut:#9aa7b6;--line:#2c3744;--c1:#6ea2ff;--c2:#f2a64a;--c3:#ee7a74;--c4:#5fd0a0;--c5:#a68cf0;--bar:#6ea2ff}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);padding:10px 16px}
+h1{font-size:19px;margin:0 0 2px}.sub{margin:0 0 8px;color:var(--mut);font-size:13px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:end}.filters label{display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:2px}
+select,button{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);max-width:210px}
+button{cursor:pointer}.fnote{font-size:12px;color:var(--mut);margin:6px 0 0}
+@media(max-width:700px){header{position:static}}
+main{max-width:1000px;margin:0 auto;padding:12px 16px 40px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:12px 0}
+h2{font-size:16px;margin:0 0 2px}.fl{margin:0 0 8px;font-size:12px;color:var(--mut)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}.kpi{border:1px solid var(--line);border-radius:8px;padding:8px 10px}.kpi b{display:block;font-size:20px}.kpi span.l{font-size:12px;color:var(--mut)}
+svg{width:100%;height:auto;display:block}svg text{fill:var(--ink);font-size:11px}svg .lbl{font-size:11px}svg .val{fill:var(--mut)}svg .ax{stroke:var(--line)}svg .mut{fill:var(--mut)}
+.c1{fill:var(--c1)}.c2{fill:var(--c2)}.c3{fill:var(--c3)}.c4{fill:var(--c4)}.c5{fill:var(--c5)}.ln{fill:none;stroke:var(--c2);stroke-width:2}.dot{fill:var(--c2)}
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--mut);margin:4px 0}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}th{color:var(--mut);font-weight:600}
+.scroll{overflow-x:auto}details{margin-top:8px}summary{cursor:pointer;color:var(--mut);font-size:13px}.empty{color:var(--mut);padding:8px 0}
+.notes{font-size:12px;color:var(--mut)}.cap{font-size:12px;color:var(--mut);margin:6px 0 2px}
+</style></head><body>
+<header><h1>Ola Bengaluru Rides Dashboard (July 2024)</h1>
+<p class="sub">103,024 bookings, 1 to 31 July 2024. Amounts in INR. Revenue = completed rides only.</p>
+<div class="filters" id="filters"></div>
+<p class="fnote">Week, vehicle and pickup-area filters apply to most sections. The payment filter applies to Q6 and Q12 only (payment exists only for completed rides). Each section lists the filters it uses.</p></header>
+<main id="app"></main>
+__INLINE__
+<script>
+(function(){
+"use strict";
+var S=null,f={w:-1,v:-1,a:-1,p:-1};
+var esc=function(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")};
+var N=function(x){return x==null?"–":Math.round(x).toLocaleString("en-US")};
+var P=function(x){return x==null?"–":(x*100).toFixed(2)+"%"};
+var D=function(x,d){return x==null?"–":x.toFixed(d)};
+var R=function(x){return x==null?"–":"INR "+Math.round(x).toLocaleString("en-US")};var R2=function(x){return x==null?"–":"INR "+x.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})};
+function K(key,val,text){return '<span data-k="'+esc(key)+'" data-v="'+(val==null?"":val)+'">'+text+"</span>"}
+function div(a,b){return b>0?a/b:null}
+function load(){var el=document.getElementById("inline-data");
+ if(el){return Promise.resolve(JSON.parse(el.textContent))}
+ var names=["meta","base","hour","day","reasons"];
+ return Promise.all(names.map(function(n){return fetch("data/"+n+".json").then(function(r){return r.json()})})).then(function(a){var o={};names.forEach(function(n,i){o[n]=a[i]});return o})}
+/* ---------- aggregation ---------- */
+function agg(flt,keyFn){var m=new Map(),rows=S.base.rows;
+ for(var i=0;i<rows.length;i++){var r=rows[i];
+  if(flt.w>=0&&r[0]!==flt.w)continue;if(flt.v>=0&&r[1]!==flt.v)continue;if(flt.a>=0&&r[2]!==flt.a)continue;if(flt.p>=0&&r[3]!==flt.p)continue;
+  var key=keyFn(r),o=m.get(key);if(!o){o={b:0,q:0,c:0,rev:0,vt:0,ct:0,dr:0,cr:0};m.set(key,o)}
+  o.b+=r[5];o.q+=r[6]||0;o.c+=r[7]||0;o.rev+=r[8]||0;o.vt+=r[9]||0;o.ct+=r[10]||0;o.dr+=r[11]||0;o.cr+=r[12]||0}
+ return m}
+function F(w,v,a,p){return{w:w?f.w:-1,v:v?f.v:-1,a:a?f.a:-1,p:p?f.p:-1}}
+function get(m,k){return m.get(k)||{b:0,q:0,c:0,rev:0,vt:0,ct:0,dr:0,cr:0}}
+/* ---------- charts ---------- */
+function hbar(items,o){o=o||{};var max=1,i;for(i=0;i<items.length;i++)max=Math.max(max,items[i].value||0);
+ var LH=24,LW=o.lw||190,W=640,BW=W-LW-110,H=items.length*LH+8,s='<svg viewBox="0 0 '+W+" "+H+'" role="img" aria-label="'+esc(o.label||"chart")+'">';
+ items.forEach(function(it,i){var y=i*LH+4,w=Math.max(0,(it.value||0)/max*BW);
+  s+='<text x="'+(LW-6)+'" y="'+(y+15)+'" text-anchor="end" class="lbl">'+esc(it.label)+'</text><rect x="'+LW+'" y="'+(y+3)+'" width="'+w.toFixed(1)+'" height="16" class="'+(it.cls||"c1")+'"/><text x="'+(LW+w+5).toFixed(1)+'" y="'+(y+15)+'" class="val">'+esc(it.text)+"</text>"});
+ return s+"</svg>"}
+function vbar(items,o){o=o||{};var W=640,H=190,L=46,B=26,T=10,n=items.length,max=1;items.forEach(function(it){max=Math.max(max,it.value||0)});
+ var bw=(W-L-8)/Math.max(n,1),every=Math.max(1,Math.ceil(n/16)),s='<svg viewBox="0 0 '+W+" "+H+'" role="img" aria-label="'+esc(o.label||"chart")+'">';
+ s+='<line class="ax" x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-4)+'" y2="'+(H-B)+'"/><text x="'+(L-4)+'" y="'+(T+8)+'" text-anchor="end" class="mut">'+esc(o.maxText||N(max))+'</text><text x="'+(L-4)+'" y="'+(H-B)+'" text-anchor="end" class="mut">0</text>';
+ items.forEach(function(it,i){var h=(it.value||0)/max*(H-B-T),x=L+i*bw;
+  s+='<rect x="'+(x+bw*0.1).toFixed(1)+'" y="'+(H-B-h).toFixed(1)+'" width="'+(bw*0.8).toFixed(1)+'" height="'+h.toFixed(1)+'" class="c1"><title>'+esc(it.label+": "+it.text)+"</title></rect>";
+  if(i%every===0)s+='<text x="'+(x+bw/2).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" class="mut">'+esc(it.short||it.label)+"</text>"});
+ return s+"</svg>"}
+function line(items,o){o=o||{};var W=640,H=190,L=50,B=26,T=10,n=items.length,vals=items.map(function(i){return i.value}).filter(function(v){return v!=null});
+ if(!vals.length)return'<p class="empty">No data for this selection.</p>';
+ var lo=Math.min.apply(null,vals),hi=Math.max.apply(null,vals),pad=(hi-lo)*0.15||0.01;lo-=pad;hi+=pad;
+ var step=(W-L-10)/Math.max(n-1,1),every=Math.max(1,Math.ceil(n/16)),pts=[],s='<svg viewBox="0 0 '+W+" "+H+'" role="img" aria-label="'+esc(o.label||"chart")+'">';
+ s+='<line class="ax" x1="'+L+'" y1="'+(H-B)+'" x2="'+(W-4)+'" y2="'+(H-B)+'"/><text x="'+(L-4)+'" y="'+(T+8)+'" text-anchor="end" class="mut">'+esc(o.fmt(hi))+'</text><text x="'+(L-4)+'" y="'+(H-B)+'" text-anchor="end" class="mut">'+esc(o.fmt(lo))+"</text>";
+ items.forEach(function(it,i){if(it.value==null)return;var x=L+i*step,y=T+(hi-it.value)/(hi-lo)*(H-B-T);pts.push(x.toFixed(1)+","+y.toFixed(1));
+  s+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="2.5" class="dot"><title>'+esc(it.label+": "+it.text)+"</title></circle>";
+  if(i%every===0)s+='<text x="'+x.toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" class="mut">'+esc(it.short||it.label)+"</text>"});
+ return s+'<polyline class="ln" points="'+pts.join(" ")+'"/></svg>'}
+function stack(items,names,o){var LW=100,W=640,BW=W-LW-10,LH=26,H=items.length*LH+8,s='<svg viewBox="0 0 '+W+" "+H+'" role="img" aria-label="'+esc(o.label)+'">';
+ items.forEach(function(it,i){var y=i*LH+4,x=LW;s+='<text x="'+(LW-6)+'" y="'+(y+16)+'" text-anchor="end" class="lbl">'+esc(it.label)+"</text>";
+  it.parts.forEach(function(p,j){var w=(p||0)*BW;s+='<rect x="'+x.toFixed(1)+'" y="'+(y+3)+'" width="'+w.toFixed(1)+'" height="18" class="c'+(j+1)+'"><title>'+esc(names[j]+": "+P(p))+"</title></rect>";
+   if(w>38)s+='<text x="'+(x+w/2).toFixed(1)+'" y="'+(y+16)+'" text-anchor="middle" style="fill:#fff;font-size:10px">'+((p||0)*100).toFixed(1)+"%</text>";x+=w})});
+ var lg='<div class="legend">'+names.map(function(n,j){return'<span><i class="c'+(j+1)+'" style="background:var(--c'+(j+1)+')"></i>'+esc(n)+"</span>"}).join("")+"</div>";
+ return lg+s+"</svg>"}
+function sec(id,title,used,body){return'<section id="'+id+'"><h2>'+esc(title)+'</h2><p class="fl">Filters used: '+used+"</p>"+body+"</section>"}
+function empty(){return'<p class="empty">No data for this selection.</p>'}
+/* ---------- sections ---------- */
+function render(){var M=S.meta,out=[],V=M.vehicles,H;
+ /* Q1 */
+ var t=get(agg(F(1,1,1,0),function(){return 0}),0);
+ out.push(sec("q1","Q1. Headline KPIs","Week, Vehicle, Area",
+  '<div class="kpis">'+[["Bookings",K("q1.bookings",t.b,N(t.b))],["Completed rides",K("q1.completed",t.c,N(t.c))],["Success rate",K("q1.success",div(t.c,t.b),P(div(t.c,t.b)))],["Revenue",K("q1.revenue",t.rev,R(t.rev))],["Average fare",K("q1.avgfare",div(t.rev,t.c),R2(div(t.rev,t.c)))]].map(function(x){return'<div class="kpi"><b>'+x[1]+'</b><span class="l">'+x[0]+"</span></div>"}).join("")+"</div>"));
+ /* Q2 */
+ var m2=agg(F(1,1,1,0),function(r){return r[4]}),tot2=t.b,it2=M.statuses.map(function(s,i){var o=get(m2,i);return{label:s.label,value:o.b,text:N(o.b)+" ("+P(div(o.b,tot2))+")",cls:s.cls,o:o,i:i}});
+ out.push(sec("q2","Q2. Booking outcome mix","Week, Vehicle, Area",tot2?hbar(it2,{label:"Booking outcome mix",lw:150})+'<div class="scroll"><table><tr><th>Outcome</th><th>Bookings</th><th>Share</th></tr>'+it2.map(function(x){return"<tr><td>"+esc(x.label)+"</td><td>"+K("q2."+x.label+".count",x.o.b,N(x.o.b))+"</td><td>"+K("q2."+x.label+".share",div(x.o.b,tot2),P(div(x.o.b,tot2)))+"</td></tr>"}).join("")+"</table></div>":empty()));
+ /* Q3 */
+ var dayRows=S.day.rows,days=[];M.dates.forEach(function(d,i){if(f.w>=0&&M.date_week[i]!==f.w)return;var b=0,c=0;dayRows.forEach(function(r){if(f.v>=0&&r[0]!==f.v)return;if(f.a>=0&&r[1]!==f.a)return;b+=r[2][i];c+=r[3][i]});days.push({d:d,b:b,c:c})});
+ var bi=days.map(function(x){return{label:x.d,short:x.d.slice(8),value:x.b,text:N(x.b)}}),si=days.map(function(x){var s=div(x.c,x.b);return{label:x.d,short:x.d.slice(8),value:s,text:P(s)}});
+ out.push(sec("q3","Q3. Daily bookings and success rate","Week, Vehicle, Area",days.length?'<p class="cap">Bookings per day</p>'+vbar(bi,{label:"Daily bookings"})+'<p class="cap">Success rate per day</p>'+line(si,{label:"Daily success rate",fmt:P})+'<details><summary>Show daily table</summary><div class="scroll"><table><tr><th>Date</th><th>Bookings</th><th>Success rate</th></tr>'+days.map(function(x){return"<tr><td>"+x.d+"</td><td>"+K("q3."+x.d+".bookings",x.b,N(x.b))+"</td><td>"+K("q3."+x.d+".success",div(x.c,x.b),P(div(x.c,x.b)))+"</td></tr>"}).join("")+"</table></div></details>":empty()));
+ /* Q4, Q5 */
+ var hb=new Array(24).fill(0),hc=new Array(24).fill(0);S.hour.rows.forEach(function(r){if(f.w>=0&&r[0]!==f.w)return;if(f.v>=0&&r[1]!==f.v)return;if(f.a>=0&&r[2]!==f.a)return;for(var h=0;h<24;h++){hb[h]+=r[3][h];hc[h]+=r[4][h]}});
+ var hh=function(h){return(h<10?"0":"")+h},hasH=hb.some(function(x){return x>0});
+ out.push(sec("q4","Q4. Hourly demand profile","Week, Vehicle, Area",hasH?vbar(hb.map(function(b,h){return{label:hh(h)+":00",short:hh(h),value:b,text:N(b)}}),{label:"Bookings by hour"})+'<details><summary>Show hourly table</summary><div class="scroll"><table><tr><th>Hour</th><th>Bookings</th></tr>'+hb.map(function(b,h){return"<tr><td>"+hh(h)+":00</td><td>"+K("q4."+hh(h)+".bookings",b,N(b))+"</td></tr>"}).join("")+"</table></div></details>":empty()));
+ out.push(sec("q5","Q5. Success rate by hour of day","Week, Vehicle, Area",hasH?line(hb.map(function(b,h){var s=div(hc[h],b);return{label:hh(h)+":00",short:hh(h),value:s,text:P(s)}}),{label:"Success rate by hour",fmt:P})+'<details><summary>Show hourly table</summary><div class="scroll"><table><tr><th>Hour</th><th>Success rate</th></tr>'+hb.map(function(b,h){return"<tr><td>"+hh(h)+":00</td><td>"+K("q5."+hh(h)+".success",div(hc[h],b),P(div(hc[h],b)))+"</td></tr>"}).join("")+"</table></div></details>":empty()));
+ /* Q6 */
+ var m6=agg(F(1,0,1,1),function(r){return r[1]}),pn=f.p>=0?" (completed rides in the selected payment method)":"";
+ out.push(sec("q6","Q6. Bookings and revenue by vehicle type","Week, Area, Payment"+pn,
+  '<p class="cap">Bookings</p>'+hbar(V.map(function(v,i){return{label:v,value:get(m6,i).b,text:N(get(m6,i).b)}}),{label:"Bookings by vehicle type",lw:110})+'<p class="cap">Revenue (INR)</p>'+hbar(V.map(function(v,i){return{label:v,value:get(m6,i).rev,text:R(get(m6,i).rev),cls:"c4"}}),{label:"Revenue by vehicle type",lw:110})+
+  '<div class="scroll"><table><tr><th>Vehicle</th><th>Bookings</th><th>Completed</th><th>Revenue</th><th>Avg fare</th></tr>'+V.map(function(v,i){var o=get(m6,i);return"<tr><td>"+esc(v)+"</td><td>"+K("q6."+v+".bookings",o.b,N(o.b))+"</td><td>"+N(o.c)+"</td><td>"+K("q6."+v+".revenue",o.rev,R(o.rev))+"</td><td>"+R2(div(o.rev,o.c))+"</td></tr>"}).join("")+"</table></div>"));
+ /* Q7 */
+ var m7=agg(F(1,0,1,0),function(r){return r[1]*10+r[4]}),it7=V.map(function(v,i){var b=0,g=[0,0,0,0];for(var s=0;s<4;s++){var o=get(m7,i*10+s);b+=o.b;g[s]=o.b}return{v:v,b:b,g:g}});
+ var sm=function(x,s){return div(x.g[s],x.b)};
+ out.push(sec("q7","Q7. Cancellation and driver-not-found rates by vehicle type","Week, Area",
+  stack(it7.map(function(x){return{label:x.v,parts:[sm(x,1),sm(x,2),sm(x,3),sm(x,0)]}}),["Customer cancel","Driver cancel","Driver not found","Success"],{label:"Outcome rates by vehicle type"})+
+  '<div class="scroll"><table><tr><th>Vehicle</th><th>Customer cancel</th><th>Driver cancel</th><th>Driver not found</th><th>Success</th></tr>'+it7.map(function(x){return"<tr><td>"+esc(x.v)+"</td><td>"+K("q7."+x.v+".custcancel",sm(x,1),P(sm(x,1)))+"</td><td>"+K("q7."+x.v+".drvcancel",sm(x,2),P(sm(x,2)))+"</td><td>"+K("q7."+x.v+".notfound",sm(x,3),P(sm(x,3)))+"</td><td>"+K("q7."+x.v+".success",sm(x,0),P(sm(x,0)))+"</td></tr>"}).join("")+"</table></div>"));
+ /* Q8 */
+ var m8=agg(F(1,1,0,0),function(r){return r[2]}),ar=M.areas.map(function(a,i){var o=get(m8,i);return{a:a,b:o.b,x:o.b-o.c,fr:div(o.b-o.c,o.b)}}).filter(function(x){return x.b>0});
+ var top=ar.slice().sort(function(p,q){return q.x-p.x||(p.a<q.a?-1:1)}).slice(0,10);
+ out.push(sec("q8","Q8. Pickup areas by bookings and failure rate","Week, Vehicle (all areas shown; chart lists the 10 areas with most failed bookings)",ar.length?
+  '<p class="cap">Top 10 areas by failed bookings</p>'+hbar(top.map(function(x){return{label:x.a,value:x.x,text:N(x.x)+" of "+N(x.b)+" ("+P(x.fr)+")",cls:"c3"}}),{label:"Top 10 areas by failed bookings",lw:130})+
+  '<details open><summary>All pickup areas (sorted by failed bookings)</summary><div class="scroll"><table><tr><th>Area</th><th>Bookings</th><th>Failed</th><th>Failure rate</th></tr>'+ar.slice().sort(function(p,q){return q.x-p.x||(p.a<q.a?-1:1)}).map(function(x){return"<tr><td>"+esc(x.a)+"</td><td>"+K("q8."+x.a+".bookings",x.b,N(x.b))+"</td><td>"+K("q8."+x.a+".failed",x.x,N(x.x))+"</td><td>"+K("q8."+x.a+".failrate",x.fr,P(x.fr))+"</td></tr>"}).join("")+"</table></div></details>":empty()));
+ /* Q9, Q10 */
+ var cr=new Array(M.cust_reasons.length).fill(0),dr=new Array(M.drv_reasons.length).fill(0);
+ S.reasons.rows.forEach(function(r){if(f.w>=0&&r[0]!==f.w)return;if(f.v>=0&&r[1]!==f.v)return;if(f.a>=0&&r[2]!==f.a)return;r[3].forEach(function(x,i){cr[i]+=x});r[4].forEach(function(x,i){dr[i]+=x})});
+ function reasons(id,title,names,arr,pre,cls){var tt=arr.reduce(function(a,b){return a+b},0),ord=names.map(function(n,i){return{n:n,c:arr[i]}}).sort(function(p,q){return q.c-p.c});
+  return sec(id,title,"Week, Vehicle, Area",tt?hbar(ord.map(function(x){return{label:x.n,value:x.c,text:N(x.c)+" ("+P(div(x.c,tt))+")",cls:cls}}),{label:title,lw:250})+'<div class="scroll"><table><tr><th>Reason</th><th>Count</th><th>Share</th></tr>'+ord.map(function(x){return"<tr><td>"+esc(x.n)+"</td><td>"+K(pre+"."+x.n+".count",x.c,N(x.c))+"</td><td>"+P(div(x.c,tt))+"</td></tr>"}).join("")+"<tr><td><b>Total</b></td><td>"+K(pre+".total",tt,N(tt))+"</td><td></td></tr></table></div>":empty())}
+ out.push(reasons("q9","Q9. Customer cancellation reasons",M.cust_reasons,cr,"q9","c2"));
+ out.push(reasons("q10","Q10. Driver cancellation reasons",M.drv_reasons,dr,"q10","c3"));
+ /* Q11 */
+ var m11=agg(F(1,1,1,0),function(r){return r[4]}),ft=0,it11=[1,2,3].map(function(s){var o=get(m11,s);ft+=o.q;return{label:M.statuses[s].label,q:o.q,b:o.b}});
+ out.push(sec("q11","Q11. Quoted value lost to non-completed bookings, by status","Week, Vehicle, Area. Quoted value is the fare shown at booking, not revenue.",ft?hbar(it11.map(function(x){return{label:x.label,value:x.q,text:R(x.q),cls:"c3"}}),{label:"Quoted value lost",lw:150})+'<div class="scroll"><table><tr><th>Status</th><th>Bookings</th><th>Quoted value</th></tr>'+it11.map(function(x){return"<tr><td>"+esc(x.label)+"</td><td>"+N(x.b)+"</td><td>"+K("q11."+x.label+".value",x.q,R(x.q))+"</td></tr>"}).join("")+"<tr><td><b>Total</b></td><td>"+N(it11.reduce(function(a,x){return a+x.b},0))+"</td><td>"+K("q11.total",ft,R(ft))+"</td></tr></table></div>":empty()));
+ /* Q12 */
+ var m12=agg(F(1,0,1,1),function(r){return r[1]}),pn12=f.p>=0?" (selected payment method)":"";
+ out.push(sec("q12","Q12. Turnaround time and ratings by vehicle type","Week, Area, Payment"+pn12+". Completed rides only; turnaround source unit is seconds (tentative), shown in minutes.",
+  '<div class="scroll"><table><tr><th>Vehicle</th><th>Avg vehicle TAT (min)</th><th>Avg customer TAT (min)</th><th>Avg driver rating</th><th>Avg customer rating</th></tr>'+V.map(function(v,i){var o=get(m12,i),a=div(o.vt,o.c*60),b=div(o.ct,o.c*60),c=div(o.dr,o.c*10),d=div(o.cr,o.c*10);return"<tr><td>"+esc(v)+"</td><td>"+K("q12."+v+".vtat",a,D(a,2))+"</td><td>"+K("q12."+v+".ctat",b,D(b,2))+"</td><td>"+K("q12."+v+".drating",c,D(c,2))+"</td><td>"+K("q12."+v+".crating",d,D(d,2))+"</td></tr>"}).join("")+"</table></div>"));
+ /* coverage */
+ out.push('<section id="coverage"><h2>Coverage: every selected question and where it appears</h2><div class="scroll"><table><tr><th>Question</th><th>Title</th><th>Section</th><th>Chart</th></tr>'+M.questions.map(function(q){return'<tr><td>'+q.id+"</td><td>"+esc(q.title)+'</td><td><a href="#'+q.section+'">#'+q.section+"</a></td><td>"+esc(q.chart)+"</td></tr>"}).join("")+"</table></div></section>");
+ out.push('<section class="notes"><h2>Notes</h2><p>Success = status Success (includes 3,926 rides flagged incomplete). Revenue = completed rides only. Quoted value (Q11) is not revenue. Fares do not follow distance or vehicle type in this data, so no revenue-per-km view is shown. Turnaround unit is seconds (tentative). Data covers July 2024 only; the week of 29 July has 3 days. Differences between vehicle types, hours, days and areas are small and mostly within chance; see Findings.md. No customer-level data is included.</p></section>');
+ document.getElementById("app").innerHTML=out.join("");
+ document.body.setAttribute("data-ready","1")}
+/* ---------- filters ---------- */
+function build(){var M=S.meta,box=document.getElementById("filters");
+ function sel(id,label,opts){return'<label>'+label+'<select id="'+id+'"><option value="All">All</option>'+opts.map(function(o){return'<option value="'+esc(o)+'">'+esc(o)+"</option>"}).join("")+"</select></label>"}
+ box.innerHTML=sel("f_week","Week",M.weeks)+sel("f_vehicle","Vehicle type",M.vehicles)+sel("f_area","Pickup area",M.areas)+sel("f_payment","Payment (Q6, Q12)",M.payments.slice(0,M.payments.length-1))+'<button id="reset" type="button">Reset</button>';
+ var map={f_week:["w",M.weeks],f_vehicle:["v",M.vehicles],f_area:["a",M.areas],f_payment:["p",M.payments]};
+ Object.keys(map).forEach(function(id){document.getElementById(id).addEventListener("change",function(e){f[map[id][0]]=e.target.value==="All"?-1:map[id][1].indexOf(e.target.value);render()})});
+ document.getElementById("reset").addEventListener("click",function(){f={w:-1,v:-1,a:-1,p:-1};Object.keys(map).forEach(function(id){document.getElementById(id).value="All"});render()})}
+load().then(function(d){S=d;build();render()}).catch(function(e){document.getElementById("app").innerHTML='<p class="empty">Could not load data: '+esc(e)+"</p>";console.error(e)});
+})();
+</script></body></html>
