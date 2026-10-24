@@ -130,7 +130,7 @@ Raw Data/                 source CSV (read-only)
 05 Cleaning and Prep/     plan, script, cleaned data
 06 Question Bank/         60 questions, 12 selected
 07 Analysis/              analysis base, Findings.md
-08 Excel Dashboard/       Dashboard_v2.xlsx (v1 kept, superseded)
+08 Excel Dashboard/       Dashboard_v2.xlsx (rejected v1 not included)
 09 Web Dashboard/         standalone .html, build and test scripts
 10 Dash Handoff/          handoff document
 docs/images/              screenshots used in this README
